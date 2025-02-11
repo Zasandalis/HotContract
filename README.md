@@ -19,5 +19,43 @@ The `GET /lead/` endpoint retrieves lead data based on various filtering and sor
 | `createdTo`     | `dateTime` | None         | `yyyy-MM-dd'T'HH:mm:ss` Example: `2025-11-02T02:02:20`     | Filter results by creation date (up to). If not provided, data will not be filtered. |
 
 ## Response
-The response will return a JSON object containing the lead data that matches the given filtering and sorting criteria.
-
+```json
+{
+    "content": [
+        {
+            "id": 85459,
+            "internalStatus": "SUCCESS",
+            "externalStatus": null,
+            "createdAt": "2023-12-21T10:57:56.884323",
+            "depositedAt": null,
+            "isDeposit": false,
+            "lastExternalStatusAt": null,
+            "errorMessage": null
+        },
+        {
+            "id": 84959,
+            "internalStatus": "SUCCESS",
+            "externalStatus": "Deposit",
+            "createdAt": "2023-12-20T12:02:10.218952",
+            "depositedAt": "2023-12-21T09:35:16.321559",
+            "isDeposit": true,
+            "lastExternalStatusAt": "2023-12-21T09:35:16.329433",
+            "errorMessage": null
+        }
+    ],
+    "pageable": {
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 100,
+        "paged": true
+    },
+    "last": true,
+    "totalElements": 2,
+    "totalPages": 1,
+    "size": 100,
+    "number": 0,
+    "first": true,
+    "numberOfElements": 2,
+    "empty": false
+}
+```
